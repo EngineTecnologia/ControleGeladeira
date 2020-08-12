@@ -1,8 +1,7 @@
 /*  Dispositivo IoT
  *  Autor: Fernando Fasti
- *  Criado: 20/12/19
- *  Versão: 1.5.3
- *  Obs: versão inicialmente preparada para trasnmissão de dados via REST teve incluída uma rotina para transmissão para o thingspeak
+ *  Criado: 01/08/2020
+ *  Versão: 1.0.0
  *  Conta thingspeak: ffasti.iot@gmail.com
  *  
  */
