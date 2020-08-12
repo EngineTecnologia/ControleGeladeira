@@ -63,8 +63,8 @@ short int tempPortas;
 short int tempTemperatura;
 short int tempCorrente;
 short int tempEnvio;
-short int tempMaxima;
-short int tempMinima;
+float tempMaxima;
+float tempMinima;
 
 float temp_1;
 float temp_2;

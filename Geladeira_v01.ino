@@ -33,16 +33,16 @@ void WiFi_Manager(){
   tempTemperatura = wifiManager._tempTemperatura.toInt();
   tempCorrente = wifiManager._tempCorrente.toInt();
   tempEnvio = wifiManager._tempEnvio.toInt();
-  tempMaxima = wifiManager._tempMaxima.toInt();
-  tempMinima = wifiManager._tempMinima.toInt();
+  tempMaxima = wifiManager._tempMaxima.toFloat();
+  tempMinima = wifiManager._tempMinima.toFloat();
       
   if(wifiManager._tempPortas == ""){
     tempPortas      = lerArquivo("/config/param1.txt").toInt();
     tempTemperatura = lerArquivo("/config/param2.txt").toInt();
     tempCorrente    = lerArquivo("/config/param3.txt").toInt();
     tempEnvio       = lerArquivo("/config/param4.txt").toInt();
-    tempMaxima      = lerArquivo("/config/param5.txt").toInt();
-    tempMinima      = lerArquivo("/config/param6.txt").toInt();
+    tempMaxima      = lerArquivo("/config/param5.txt").toFloat();
+    tempMinima      = lerArquivo("/config/param6.txt").toFloat();
     seqMetrics      = lerArquivo("/config/seqMetrics.txt").toInt();
     sequencial      = lerArquivo("/config/sequencial.txt").toInt();
     Serial.print("seqMetricas: ");

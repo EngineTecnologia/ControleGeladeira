@@ -1,0 +1,8 @@
+ThingSpeak.setField(1, temp_1); //atualiza campo 1 (Temp_geladeira)
+ThingSpeak.setField(2, temp_2); //atualiza campo 2 (Temp_freezer)
+ThingSpeak.setField(3, temp_3); //atualiza campo 2 (Temp_ambiente)
+ThingSpeak.setField(4, porta_1); //atualiza campo 4 (Porta_geladeira)
+ThingSpeak.setField(5, porta_2); //atualiza campo 5 (Porta_freezer)
+ThingSpeak.setField(6, 1); //atualiza campo 6 (reles tomadas 1,2 e 3)
+ThingSpeak.setField(7, 0); //atualiza campo 7 (rele tomadas 4)
+ThingSpeak.setField(8, valorCorrente1); //atualiza campo 8 (Corrente tomada 1)

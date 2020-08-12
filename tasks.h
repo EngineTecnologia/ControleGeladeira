@@ -237,10 +237,6 @@ void taskSensoresThingspeak(void * parameter){
   WiFiClient TSClient;
   ThingSpeak.begin(TSClient); // Inicializa ThingSpeak  
   delay(1);
-
-//  short int temp_Desejada_Superior = 18.00;
-//  short int temp_Desejada_Inferior = 17.00;
-  
   
   while(1){
     delayMicroseconds(5);
@@ -286,6 +282,7 @@ void taskSensoresThingspeak(void * parameter){
         Serial.println("Atualizando campos 1 e 2 no thingspeak");
         ThingSpeak.setField(1, temp_1); //atualiza campo 1 (Temp_geladeira)
         ThingSpeak.setField(2, temp_2); //atualiza campo 2 (Temp_freezer)
+        ThingSpeak.setField(3, temp_3); //atualiza campo 2 (Temp_ambiente)
         Serial.println("");
 
         //verifica se temperatura ultrapassou o limite superior
@@ -301,8 +298,8 @@ void taskSensoresThingspeak(void * parameter){
           Serial.println("Rele 3 Ligado!");   
           Serial.println("Rele 4 Desligado!"); 
           Serial.println("Atualizando campos 6 e 7 no thingspeak");
-          ThingSpeak.setField(6, 1); //atualiza campo 1 (Temp_geladeira)
-          ThingSpeak.setField(7, 0); //atualiza campo 2 (Temp_freezer)
+          ThingSpeak.setField(6, 1); //atualiza campo 6 (reles tomadas 1,2 e 3)
+          ThingSpeak.setField(7, 0); //atualiza campo 7 (rele tomadas 4)
           Serial.println("");      
         }
 
@@ -338,8 +335,8 @@ void taskSensoresThingspeak(void * parameter){
           Serial.println("Rele 3 Deligado!"); 
           Serial.println("Rele 4 Ligado!"); 
           Serial.println("Atualizando campos 6 e 7 no thingspeak");
-          ThingSpeak.setField(6, 0); //atualiza campo 1 (Temp_geladeira)
-          ThingSpeak.setField(7, 1); //atualiza campo 2 (Temp_freezer)
+          ThingSpeak.setField(6, 0); //atualiza campo 6 (reles tomadas 1,2 e 3)
+          ThingSpeak.setField(7, 1); //atualiza campo 7 (rele tomadas 4)
           Serial.println("");
         }
         
@@ -387,7 +384,7 @@ void taskSensoresThingspeak(void * parameter){
         Serial.print(valorCorrente3);
         Serial.println("");
         Serial.println("Atualizando campo 3 no thingspeak");
-        ThingSpeak.setField(3, valorCorrente1); //atualiza campo 1 (Temp_geladeira)
+        ThingSpeak.setField(8, valorCorrente1); //atualiza campo 8 (Corrente tomada 1)
         Serial.println("");
       }
     
